@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
-
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 --root{
   /**#### Text */
@@ -26,21 +30,31 @@
 
 --light-grayish-blue: hsl(240, 5%, 91%);
 
-/**## Typography */
 
-/** ### Body Copy */
-
---font-size: 12px;
 }
+
 
 body {
   margin: 0;
   font-family: 'Kumbh Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(120deg, hsl(273, 75%, 66%), hsl(240, 6%, 50%));
+  background-repeat-x: no-repeat;
+  background-repeat-y: no-repeat;
+  min-height: calc(100vh - 0.1px);  /**what does this mean*/
+  font-size: 12px;
+  padding: 1.25rem;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container{
+  background-color: #fff;
+  padding: 1.25rem;
+  border-radius: 1rem;
 }
+
+.container > article:first-child img{
+  display: block;
+  margin: auto;
+}
+
