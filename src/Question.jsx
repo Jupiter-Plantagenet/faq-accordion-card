@@ -1,14 +1,18 @@
 import React from 'react'
 
-const Question = () => {
+const Question = ({ question, answer}) => {
   return (
     <>
-    <article>
-    <div>Question</div>
-    {/**img */}
-    </article>
+    <div>
+        <article>
+            <h2>{question}</h2>
+            {/**img */}
+        </article>
 
-    <p>Answer</p>
+        <p>{answer}</p>
+
+    </div>
+   
     
     </>
     
