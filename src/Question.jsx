@@ -1,15 +1,19 @@
-import React from 'react'
+import {FaChevronUp, FaChevronDown} from 'react-icons/fa'
+import { useState } from 'react';
 
 const Question = ({ question, answer}) => {
+  const [isShowing, setIsShowing] = useState(false);
   return (
     <>
-    <div>
-        <article>
-            <h2>{question}</h2>
-            {/**img */}
+    <div className='question'>
+        <article onClick={() => setIsShowing(!isShowing)}>
+          {/**Give it a class of clicked of isShowing is true, else no class */}
+          <h2 className={`${isShowing && "clicked"}`}>{question}</h2>
+          {isShowing ? <FaChevronUp className= 'icon'/> : <FaChevronDown className= 'icon'/>}
         </article>
 
-        <p>{answer}</p>
+      {/**Show paragraph only when isShowing is true */}
+        {isShowing && <p>{answer}</p>}
 
     </div>
    

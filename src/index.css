@@ -45,16 +45,84 @@ body {
   min-height: calc(100vh - 0.1px);  /**what does this mean*/
   font-size: 12px;
   padding: 1.25rem;
+  display: flex;  /**center content*/
+  align-items: center;
+  justify-content: center;
 }
 
 .container{
   background-color: #fff;
   padding: 1.25rem;
   border-radius: 1rem;
+  width: 400px;
 }
 
+/**centre woman image*/
 .container > article:first-child img{
   display: block;
-  margin: auto;
+  margin: auto; 
 }
 
+.container h1{
+  color: hsl(238, 29%, 16%);
+  font-size: 2rem;
+  margin: 1rem 0 1.25rem;
+}
+
+/**create dividers*/
+.question{
+  border-bottom: 0.1rem solid hsl(240, 5%, 91%);
+  padding: 1rem 0;
+}
+
+/*what does this do? center?*/
+.question article{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom:0.5rem ;
+  cursor: pointer;
+}
+
+.question article h2{
+  color: hsl(237, 12%, 33%);
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+/**when the h2 has a class of clicked*/
+.question article h2.clicked{
+  font-weight: 600;
+}
+
+.question p{
+  color: hsl(240, 6%, 50%);
+}
+
+.icon{
+  color: hsl(14, 88%, 65%);
+}
+
+@media (min-width: 768px) {
+  .container{
+    width: 700px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 992px;
+  }
+  
+}
+
+.container > article:first-child{
+  flex: 1;
+  margin-right: 3rem;
+}
+.container > article:nth-child(2){
+  flex: 1;
+}
