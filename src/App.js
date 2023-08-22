@@ -1,12 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import './Accordion'
+import Accordion from './Accordion';
 
 function App() {
   return (
     <div className="App" >
-      <header className="App-header" >
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
+      <div className="App-header" >
+        <Accordion>
+          <p>Accordion</p>
+        </Accordion>
+        {/**<p>
         How many team members can I invite?
   You can invite up to 2 additional users on the Free plan. There is no limit on 
   team members for the Premium plan.
@@ -23,16 +27,8 @@ function App() {
 
   Do you provide additional support?
   Chat and email support is available 24/7. Phone lines are open during normal business hours.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        </p>*/}
+      </div>
     </div>
   );
 }
